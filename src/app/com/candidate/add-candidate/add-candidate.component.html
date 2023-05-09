@@ -1,0 +1,64 @@
+<div class="container">
+  <h3 mat-dialog-title class="modal-header">Add new candidate</h3>
+
+  <form class="mat-dialog-content"  #formControl="ngForm">
+<!-- 
+    <div class="form">
+      <mat-form-field color="accent">
+        <input matInput #input placeholder="Id" [(ngModel)]="data.id" name="id" required >
+        <mat-error *ngIf="formControl.invalid">{{getErrorMessage()}}</mat-error>
+      </mat-form-field>
+    </div> -->
+
+    <div class="form">
+      <mat-form-field>
+        <input matInput #input placeholder="First name" [(ngModel)]="data.firstName" name="firstName" required>
+        <mat-error *ngIf="formControl.invalid">{{getErrorMessage()}}</mat-error>
+      </mat-form-field>
+    </div>
+
+    <div class="form">
+      <mat-form-field>
+        <input matInput #input placeholder="Last name" [(ngModel)]="data.lastName" name="lastName" required>
+        <mat-error *ngIf="formControl.invalid">{{getErrorMessage()}}</mat-error>
+      </mat-form-field>
+    </div>
+
+    <div class="form">
+      <mat-radio-group  [(ngModel)]="data.gender" name="gender">
+       <mat-label>Gender:</mat-label> <br>
+        <mat-radio-button  value="male">Male</mat-radio-button>&nbsp;&nbsp;
+        <mat-radio-button value="female">Female</mat-radio-button>
+      </mat-radio-group>
+    </div>
+
+    <div class="form">
+      <mat-form-field>
+        <input matInput placeholder="email address" [(ngModel)]="data.email" name="email" required>
+      </mat-form-field>
+    </div>
+
+    <div class="form">
+      <mat-form-field class="example-full-width">
+        <input matInput [matDatepicker]="picker" placeholder="Choose birth date" [(ngModel)]="data.birthDate" name="birthDate">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+    </div>
+
+    <div class="form">
+      <mat-form-field>
+        <input matInput placeholder="expected salary" [(ngModel)]="data.expectedSalary" name="expectedSalary">
+      </mat-form-field>
+    </div>
+
+    <div mat-dialog-actions class="button-wrapper">
+      <button mat-raised-button type="submit" [disabled]="!formControl.valid" [mat-dialog-close]="1" (click)="addCandidate()">
+        <mat-icon class = "button-color" aria-label="Example icon-button with a heart icon">add</mat-icon>&nbsp;&nbsp;Save
+      </button>
+      <button mat-raised-button (click)="cancel()" tabindex="-1"> 
+        <mat-icon class = "button-color" aria-label="Example icon-button with a heart icon">cancel</mat-icon>&nbsp;&nbsp;Cancel
+      </button>
+    </div>
+  </form>
+</div>

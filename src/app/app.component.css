@@ -1,0 +1,44 @@
+.navbar
+{
+  background-color: rgb(21, 59, 109) !important;
+  height: 100% !important;
+}
+.footer
+{
+  background-color: rgb(21, 59, 109) !important;
+  /* position: relative; */
+}
+.margin
+{
+  margin-top: 25px !important;
+}
+img
+{
+  height: 100px;
+  width: 100%;
+  margin-left: 20px;
+}
+.nav-link
+{
+  color: white !important;
+}
+.nav-item
+{
+  text-align: center;
+  margin-left: 50px;
+  margin-top: 20px;
+}
+.nav-item ul li 
+{
+  display: inline-block;
+}
+a.nav-link.active
+{
+  border-bottom: solid 2px white !important;
+}
+footer
+{
+  position:fixed;
+  bottom:0px;
+  width:100%;
+}

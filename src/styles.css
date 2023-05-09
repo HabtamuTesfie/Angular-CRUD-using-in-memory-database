@@ -1,1 +1,52 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+.footer 
+{
+    position: absolute;
+    bottom: 0;
+    width:100%;
+    height: 70px;
+    background-color: blue;
+    text-align: center;
+    color: white;
+}
+.border, .card, .card-body
+{
+  border: none !important;
+  border-radius: 0 !important;
+}
+
+.button-wrapper
+{
+  margin-left: 40%;
+  margin-top: 50px;
+}
+
+.mat-radio-button.mat-accent .mat-radio-inner-circle
+{
+  background-color: rgb(50, 78, 116) !important;;
+}
+.mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle
+{
+  border-color: rgb(50, 78, 116) !important;
+}
+.button-color
+{
+  color: rgb(29, 82, 151) !important;
+}
+.mat-dialog-content
+{
+  overflow: unset !important;
+  max-height: 80vh;
+}
+.mat-form-field.mat-accent .mat-input-element
+{
+  caret-color: rgb(50, 78, 116) !important;
+}
+input:focus 
+{ 
+ outline: none !important;
+ outline-color: rgb(21, 59, 109,.8) !important;
+ border-color: rgb(21, 59, 109,.8) !important;
+}

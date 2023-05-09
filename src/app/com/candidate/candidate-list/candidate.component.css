@@ -1,0 +1,20 @@
+ /* @import '@angular/material/prebuilt-themes/deeppurple-amber.css';  */
+ .button-color-edit
+ {
+   color: rgb(76, 99, 135) !important;
+ }
+ 
+ .mat-toolbar.mat-primary
+ {
+   background: rgb(21, 59, 109,.8) !important;
+ }
+ input:focus 
+ { 
+  outline: none !important;
+  outline-color: rgb(21, 59, 109,.8) !important;
+  border-color: rgb(21, 59, 109,.8) !important;
+}
+.mat-row:hover 
+{
+  background-color: rgba(220, 225, 231, 0.8);
+}
