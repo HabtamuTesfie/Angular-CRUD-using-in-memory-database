@@ -86,7 +86,7 @@ export class CandidateComponent implements OnInit
     this.loadData();
 
     this.isLoading = true;
-    
+
     setTimeout(()=>
     {
       this.isLoading = false;
@@ -168,12 +168,13 @@ export class CandidateComponent implements OnInit
    * To delete candidate data.
    */
   //---------------------------------------------------------------------------
-  deleteItem(i: number, candidate: Candidate) 
+  public deleteItem(i: number, candidate: Candidate): void
   {
     this.index = i;
     const dialogRef = this.dialogService.open(DeleteCandidateComponent, 
     {
-      data: candidate
+      data: candidate,
+      height: '450px'
     });
 
     dialogRef.afterClosed().subscribe(result => 
@@ -192,7 +193,7 @@ export class CandidateComponent implements OnInit
    * To refresh candidate list table.
    */
   //---------------------------------------------------------------------------
-  private refreshTable() 
+  private refreshTable(): void
   {
     this.paginator._changePageSize(this.paginator.pageSize);
   } // refreshTable
@@ -214,7 +215,6 @@ export class CandidateComponent implements OnInit
 
       this.srvDs.filter = this.filter.nativeElement.value;
     });
-    if (this.srvDs) this.isLoading = false;
   } // loadData
 
 } // CandidateComponent

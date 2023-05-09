@@ -1,5 +1,5 @@
 <div class="container">
-  <h3 mat-dialog-title>Are you sure?</h3>
+  <h3 mat-dialog-title class="modal-header">Are you sure?</h3>
   <div mat-dialog-content>
     <strong> First name:</strong> {{data.firstName}}
     <p></p>
@@ -15,8 +15,10 @@
     <p></p>
   </div>
 
-  <div mat-dialog-actions>
-    <button mat-button [mat-dialog-close]="1">Delete</button>
-    <button mat-button (click)="cancel()" tabindex="-1">Cancel</button>
+  <div mat-dialog-actions class="btn-wrapper">
+    <button mat-raised-button [mat-dialog-close]="1">
+      <mat-icon class = "button-color" aria-label="Example icon-button with a heart icon">delete</mat-icon>&nbsp;&nbsp;Delete</button>
+    <button mat-raised-button (click)="cancel()" tabindex="-1">
+      <mat-icon class = "button-color" aria-label="Example icon-button with a heart icon">cancel</mat-icon>&nbsp;&nbsp;Cancel</button>
   </div>
 </div>

@@ -4,6 +4,19 @@
   flex-direction: column;
 }
 
-.container > * {
+.container > * 
+{
   width: 100%;
+}
+.modal-header
+{
+  background-color: rgb(27, 54, 90) !important;
+  width: 130% !important;
+  margin-left: -42px;
+  margin-top: -40px;
+  color: white;
+}
+.btn-wrapper
+{
+  margin-top: 25px;
 }

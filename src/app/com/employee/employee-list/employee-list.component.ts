@@ -11,8 +11,6 @@ import {Observable} from "rxjs";
 import {Employee} from "../../../model/models";
 import {Component, ElementRef, OnInit, ViewChild} from "@angular/core";
 import {Router} from '@angular/router';
-import {HttpClient} from "@angular/common/http";
-import {MatDialog} from "@angular/material/dialog";
 import {MatPaginator} from "@angular/material/paginator";
 import {MatSort} from "@angular/material/sort";
 import {ShareService} from "src/app/srv/share.service";
