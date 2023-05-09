@@ -1,14 +1,13 @@
 //-----------------------------------------------------------------------------
 /*
  *   Application Name: Xoka - Employee Management
- *       Date Created: 30/08/2023
+ *       Date Created: 05/07/2023
  *           Compiler: TypeScript
  *
  * Developer: Habtamu Tesfie
  */
 //-----------------------------------------------------------------------------
 import {Component} from '@angular/core';
-import {Router} from '@angular/router';
 
 
 //-----------------------------------------------------------------------------
@@ -33,19 +32,10 @@ export class AppComponent
   //---------------------------------------------------------------------------
   /**
    * Constructor.
-   *
-   * @param router Router
    */
   //---------------------------------------------------------------------------
-  constructor( private router:  Router)
+  constructor()
   {
-    if (this.router.url.indexOf("employee") > 0)
-    {  
-      this.title = 'Xoka Employee Information Management System';
-    }
-    else
-    {
-      this.title = 'Xoka Candidate Information Management System';
-    }
+    this.title = 'Xoka Candidate Information Management System';
   }
-}
+} // AppComponent

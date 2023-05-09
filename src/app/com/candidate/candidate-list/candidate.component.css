@@ -18,3 +18,7 @@
 {
   background-color: rgba(220, 225, 231, 0.8);
 }
+.mat-row.highlighted 
+{
+  background: #999;
+}

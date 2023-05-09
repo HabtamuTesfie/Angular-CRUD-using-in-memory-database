@@ -20,7 +20,7 @@
 .button-wrapper
 {
   margin-left: 40%;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 .mat-radio-button.mat-accent .mat-radio-inner-circle
@@ -46,7 +46,12 @@
 }
 input:focus 
 { 
- outline: none !important;
- outline-color: rgb(21, 59, 109,.8) !important;
- border-color: rgb(21, 59, 109,.8) !important;
+  outline: none !important;
+  outline-color: rgb(21, 59, 109,.8) !important;
+  border-color: rgb(21, 59, 109,.8) !important;
+}
+td.whatever
+{
+  max-width: 150px !important;
+  word-wrap: break-word !important;
 }

@@ -1,7 +1,7 @@
 //-----------------------------------------------------------------------------
 /*
  *   Application Name: Xoka - Employee Management
- *       Date Created: 30/08/2023
+ *       Date Created: 05/07/2023
  *           Compiler: TypeScript
  *
  * Developer: Habtamu Tesfie
@@ -28,7 +28,7 @@ import {AddCandidateComponent} from './com/candidate/add-candidate/add-candidate
 import {UpdateCandidateComponent} from './com/candidate/update-candidate/update-candidate.component';
 import {DeleteCandidateComponent} from './com/candidate/delete-candidate/delete-candidate.component';
 import {HomeComponent} from './com/home/home.component';
-import {LoadingComponent} from './com/loading/loading.component';
+import { PhoneNumberDirective } from './directive/phone-number.directive';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +41,7 @@ import {LoadingComponent} from './com/loading/loading.component';
     UpdateCandidateComponent,
     DeleteCandidateComponent,
     HomeComponent,
-    LoadingComponent
+    PhoneNumberDirective
   ],
   imports: [
     BrowserModule,

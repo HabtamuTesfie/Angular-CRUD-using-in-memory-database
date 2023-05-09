@@ -1,7 +1,7 @@
 //-----------------------------------------------------------------------------
 /*
  *   Application Name: Xoka - Employee Management
- *       Date Created: 30/08/2023
+ *       Date Created: 05/07/2023
  *           Compiler: TypeScript
  *
  * Developer: Habtamu Tesfie
@@ -47,7 +47,7 @@ export class UpdateEmployeeComponent implements OnInit
               private router: Router,
               private srvS:   ShareService) {}
 
-              
+
   //---------------------------------------------------------------------------
   /**
    * Component initialization event handler.

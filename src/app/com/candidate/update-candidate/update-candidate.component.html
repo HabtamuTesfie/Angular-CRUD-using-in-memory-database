@@ -21,6 +21,7 @@
         <mat-radio-button value="female">Female</mat-radio-button>
       </mat-radio-group>
     </div>
+  <!-- <br> -->
 
     <div class="form">
       <mat-form-field>
@@ -30,7 +31,7 @@
 
        <div class="form">
       <mat-form-field class="example-full-width">
-        <input matInput  [matDatepicker]="picker" [placeholder]="data.birthDate" [(ngModel)]="sample.endDate" name="birthDate">
+        <input matInput #input [matDatepicker]="picker" [placeholder]="data.birthDate" [(ngModel)]="sample.endDate" name="birthDate">
         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
       </mat-form-field>
@@ -39,6 +40,12 @@
     <div class="form">
       <mat-form-field>
         <input matInput #input  placeholder="Expected salary" [(ngModel)]="data.expectedSalary" name="expectedSalary">
+      </mat-form-field>
+    </div>
+
+    <div class="form">
+      <mat-form-field>
+        <input phoneNumber matInput placeholder="phone number" [(ngModel)]="data.phone" name="phone">
       </mat-form-field>
     </div>
 

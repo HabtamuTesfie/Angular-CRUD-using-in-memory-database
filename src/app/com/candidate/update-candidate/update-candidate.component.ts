@@ -1,17 +1,16 @@
 //-----------------------------------------------------------------------------
 /*
- *   Application Name: Xoka - Employee Management
- *       Date Created: 30/08/2023
+ *   Application Name: Xoka - Candidate Information Management
+ *       Date Created: 05/07/2023
  *           Compiler: TypeScript
  *
  * Developer: Habtamu Tesfie
  */
 //-----------------------------------------------------------------------------
-import {Component, Inject, OnInit} from '@angular/core';
+import {Component, Inject} from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import {ShareService} from '../../../srv/share.service';
 import {Candidate} from '../../../model/models';
-import {FormControl, Validators} from '@angular/forms';
 
 
 //-----------------------------------------------------------------------------
@@ -26,7 +25,9 @@ import {FormControl, Validators} from '@angular/forms';
 })
 export class UpdateCandidateComponent
 {
+  //--------------------------------------------------------Exposed data members
   public sample: any; 
+
   //---------------------------------------------------------------------------
   /**
    *                             Initialization
@@ -46,10 +47,9 @@ export class UpdateCandidateComponent
     public srvS: ShareService) 
   {
 
-    this.sample = { endDate: this.data.birthDate };
+    this.sample = { endDate: this.data.birthDate};
   }
 
-  
 
   //----------------------------------------------------------------------------
   /**

@@ -1,7 +1,7 @@
 //-----------------------------------------------------------------------------
 /*
- *   Application Name: Xoka - Employee Management
- *       Date Created: 30/08/2023
+ *   Application Name: Xoka - Candidate Information Management
+ *       Date Created: 05/07/2023
  *           Compiler: TypeScript
  *
  * Developer: Habtamu Tesfie
@@ -62,16 +62,12 @@ export class ShareService
     return this.dataChange.value;
   }
 
-  // getDialogData()
-  // {
-  //   console.log("+++++++++++++++++++++++++++++++++++++++++++++");
-  //   console.log(this.candidateData)
-  //   console.log("+++++++++++++++++++++++++++++++++++++++++++++");
-  //   debugger
-  //   return this.candidateData;
-  // }
 
-  /** CRUD METHODS */
+  //----------------------------------------------------------------------------
+  /**
+   * CRUD METHODS
+   */
+  //----------------------------------------------------------------------------
   public getAllCandidates(): void 
   {
     this.http.get<Candidate[]>(this.candidateUrl).subscribe(data => 
@@ -82,14 +78,19 @@ export class ShareService
     {
       console.log (error.name + ' ' + error.message);
     });
-  }
+  } // getAllCandidates
 
-  // DEMO ONLY, you can find working methods below
+
+  //----------------------------------------------------------------------------
+  /**
+   * To add new candidate
+   */
+  //----------------------------------------------------------------------------
   public addCandidate(candidate: Candidate): void
   {
     this.candidateData.next(candidate);
     this.http.post(`${this.candidateUrl}`, candidate);
-  }
+  } // addCandidate
 
 
   //----------------------------------------------------------------------------
@@ -99,7 +100,6 @@ export class ShareService
   //----------------------------------------------------------------------------
   public updateCandidate(candidate: Candidate): void 
   {
-    // this.dataChange.next(candidate)
     this.candidateData.next(candidate);
   } // updateCandidate
 
@@ -109,7 +109,6 @@ export class ShareService
    * To add employee data.
    *
    * @param  employee  Employee data
-   * @return
    */
   //----------------------------------------------------------------------------
   createEmployee(employee: Object): Observable<Object>
@@ -124,7 +123,6 @@ export class ShareService
    *
    * @param  id  Employee id
    * @param  value  modified employee data
-   * @return
    */
   //----------------------------------------------------------------------------
   updateEmployee(id: number, value: any): Observable<Object>
@@ -138,7 +136,6 @@ export class ShareService
    * To delete employee data.
    *
    * @param  id  Employee id
-   * @return
    */
   //----------------------------------------------------------------------------
   deleteCandidate(id: number): Observable<any>
@@ -152,7 +149,6 @@ export class ShareService
    * To delete employee data.
    *
    * @param  id  Employee id
-   * @return
    */
   //----------------------------------------------------------------------------
   deleteEmployee(id: number): Observable<any>
@@ -165,55 +161,12 @@ export class ShareService
   /**
    * To get all employee data.
    *
-   * @param  id  Employee id
-   * @return
+   * @return Employee observable
    */
   //----------------------------------------------------------------------------
   getEmployeesList(): Observable<any>
   {
     return this.http.get(`${this.employeeUrl}`);
   } // getEmployeesList
-
-  // ADD, POST METHOD
-  addItem(candidate: Candidate): void 
-  {
-    this.http.post(this.candidateUrl, candidate).subscribe(data => 
-    {
-      this.candidateData.next(candidate);
-      console.log('Successfully added', 3000);
-      },
-      (err: HttpErrorResponse) => 
-      {
-      console.log('Error occurred. Details: ' + err.name + ' ' + err.message, 8000);
-    });
-   }
-
-    // UPDATE, PUT METHOD
-     updateItem(candidate: Candidate): void 
-     {
-       this.http.put(this.candidateUrl + candidate.id, candidate).subscribe(data => 
-       {
-         this.candidateData.next(candidate);
-         console.log('Successfully edited', 3000);
-      },
-      (err: HttpErrorResponse) => 
-      {
-        console.log('Error occurred. Details: ' + err.name + ' ' + err.message, 8000);
-      }
-    );
-  }
-
-  // DELETE METHOD
-  deleteItem(id: number): void 
-  {
-    this.http.delete(this.candidateUrl + id).subscribe(data => 
-    {
-      console.log('Successfully deleted', 3000);
-    },
-    (err: HttpErrorResponse) => 
-    {
-     console.log('Error occurred. Details: ' + err.name + ' ' + err.message, 8000);
-   });
-  }
 
 } // ShareService

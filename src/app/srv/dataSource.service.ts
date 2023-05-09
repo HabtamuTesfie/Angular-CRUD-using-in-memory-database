@@ -1,7 +1,7 @@
 //-----------------------------------------------------------------------------
 /*
- *   Application Name: Xoka - Employee Management
- *       Date Created: 30/08/2023
+ *   Application Name: Xoka - Candidate Information Management
+ *       Date Created: 05/07/2023
  *           Compiler: TypeScript
  *
  * Developer: Habtamu Tesfie
@@ -12,8 +12,7 @@ import {Candidate} from '../model/models';
 import {BehaviorSubject, Observable, map, merge} from 'rxjs';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatSort} from '@angular/material/sort';
-import {Injectable} from '@angular/core';
-import { ShareService } from './share.service';
+import {ShareService} from './share.service';
 
 
 //-----------------------------------------------------------------------------
@@ -21,7 +20,6 @@ import { ShareService } from './share.service';
  * Data source services
  */
 //-----------------------------------------------------------------------------
-@Injectable({  providedIn: 'root' })
 export class DataSourceService extends DataSource<Candidate> 
 {
   //--------------------------------------------------------private data members

@@ -47,6 +47,11 @@
       <mat-cell *matCellDef="let row"> {{row.expectedSalary}}</mat-cell>
     </ng-container>
 
+    <ng-container matColumnDef="phone">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>Phone number</mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.phone}}</mat-cell>
+    </ng-container>
+
     <!-- actions -->
     <ng-container matColumnDef="actions">
       <mat-header-cell *matHeaderCellDef>
@@ -67,8 +72,20 @@
     </ng-container>
 
     <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"
+      (click)="selection.toggle(row)" 
+      [ngClass]="{hovered: row.hovered, highlighted: selection.isSelected(row)}"
+      (mouseover)="row.hovered = true" (mouseout)="row.hovered = false">
+   </mat-row>
   </mat-table>
+
+  
+  <mat-card *ngIf="isLoading" style="display: flex; justify-content: center; align-items: center">
+    <mat-progress-spinner 
+      color="primary" 
+      mode="indeterminate">
+    </mat-progress-spinner>
+  </mat-card>
 
 
   <div class="no-results" [style.display]="srvDs.renderedData.length == 0 ? '' : 'none'">

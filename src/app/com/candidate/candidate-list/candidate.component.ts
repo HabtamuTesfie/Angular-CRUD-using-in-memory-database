@@ -1,7 +1,7 @@
 //-----------------------------------------------------------------------------
 /*
- *   Application Name: Xoka - Employee Management
- *       Date Created: 30/08/2023
+ *   Application Name: Xoka - Candidate Information Management
+ *       Date Created: 05/07/2023
  *           Compiler: TypeScript
  *
  * Developer: Habtamu Tesfie
@@ -13,12 +13,13 @@ import {HttpClient} from '@angular/common/http';
 import {MatDialog} from '@angular/material/dialog';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatSort} from '@angular/material/sort';
-import {fromEvent} from 'rxjs';
-import { DataSourceService } from 'src/app/srv/dataSource.service';
-import { AddCandidateComponent } from '../add-candidate/add-candidate.component';
-import { Candidate } from '../../../model/models';
-import { UpdateCandidateComponent } from '../update-candidate/update-candidate.component';
-import { DeleteCandidateComponent } from '../delete-candidate/delete-candidate.component';
+import {Observable, Subscription, fromEvent, timer} from 'rxjs';
+import {DataSourceService} from 'src/app/srv/dataSource.service';
+import {AddCandidateComponent} from '../add-candidate/add-candidate.component';
+import {Candidate} from '../../../model/models';
+import {UpdateCandidateComponent} from '../update-candidate/update-candidate.component';
+import {DeleteCandidateComponent} from '../delete-candidate/delete-candidate.component';
+import {SelectionModel} from '@angular/cdk/collections';
 
 
 //-----------------------------------------------------------------------------
@@ -34,13 +35,18 @@ import { DeleteCandidateComponent } from '../delete-candidate/delete-candidate.c
 export class CandidateComponent implements OnInit 
 {
   //-------------------------------------------------------- Exposed properties
-  public displayedColumns = ['id', 'firstName', 'lastName', 'gender', 'email', 'birthDate', 'expectedSalary', 'actions'];
+  public displayedColumns = ['id', 'firstName', 'lastName', 'gender', 'email', 'birthDate', 'expectedSalary', 'phone', 'actions'];
+  public selection = new SelectionModel<Candidate>(false, []);
   public index:  number;
   public id:     number;
 
+  timeLeft: number = 60;
+  interval: any;
+  
+  public isLoading: boolean = true;
+
   //--------------------------------------------------------Private data memebers
   private candidateData: Candidate;
-
 
   //---------------------------------------------------------------------------
   /**
@@ -78,6 +84,13 @@ export class CandidateComponent implements OnInit
       this.candidateData = data;
     });
     this.loadData();
+
+    this.isLoading = true;
+    
+    setTimeout(()=>
+    {
+      this.isLoading = false;
+    },1000)
   } // ngOnInit
 
 
@@ -125,16 +138,24 @@ export class CandidateComponent implements OnInit
   {
     const dialogRef = this.dialogService.open(UpdateCandidateComponent, 
     {
-      data: candidate,
+      data: 
+      {
+        firstName:      candidate.firstName, 
+        lastName:       candidate.lastName,
+        gender:         candidate.gender,
+        email:          candidate.email,
+        birthDate:      candidate.birthDate,
+        expectedSalary: candidate.expectedSalary,
+        phone:          candidate.phone
+      },
       autoFocus: false,
       height:   '650px'
     });
 
     dialogRef.afterClosed().subscribe(result => 
-      {
+    {
       if (result === 1) 
       {
-        this.srvS.dataChange.value.splice(i, 1);
         this.srvS.dataChange.value[i] = this.candidateData;
         this.refreshTable();
       }
@@ -193,6 +214,7 @@ export class CandidateComponent implements OnInit
 
       this.srvDs.filter = this.filter.nativeElement.value;
     });
+    if (this.srvDs) this.isLoading = false;
   } // loadData
 
 } // CandidateComponent

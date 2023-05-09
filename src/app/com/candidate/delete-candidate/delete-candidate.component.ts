@@ -1,7 +1,7 @@
 //-----------------------------------------------------------------------------
 /*
- *   Application Name: Xoka - Employee Management
- *       Date Created: 30/08/2023
+ *   Application Name: Xoka - Candidate Information Management
+ *       Date Created: 05/07/2023
  *           Compiler: TypeScript
  *
  * Developer: Habtamu Tesfie
