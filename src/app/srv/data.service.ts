@@ -35,7 +35,7 @@ export class DataService implements InMemoryDbService
 
   //----------------------------------------------------------------------------
   /**
-   * To create db object.
+   * To create mock db object.
    *
    * @return
    */

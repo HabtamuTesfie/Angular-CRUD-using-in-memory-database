@@ -28,7 +28,7 @@ import {AddCandidateComponent} from './com/candidate/add-candidate/add-candidate
 import {UpdateCandidateComponent} from './com/candidate/update-candidate/update-candidate.component';
 import {DeleteCandidateComponent} from './com/candidate/delete-candidate/delete-candidate.component';
 import {HomeComponent} from './com/home/home.component';
-import { PhoneNumberDirective } from './directive/phone-number.directive';
+import {PhoneNumberDirective} from './directive/phone-number.directive';
 @NgModule({
   declarations: [
     AppComponent,

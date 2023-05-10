@@ -34,8 +34,35 @@ export class AppComponent
    * Constructor.
    */
   //---------------------------------------------------------------------------
-  constructor()
-  {
-    this.title = 'Xoka Candidate Information Management System';
-  }
+  // constructor()
+  // {
+
+  //   const menuElement: any = document.querySelector("#candidate-page");
+  //   if(menuElement)
+  //   {
+  //     menuElement.addEventListener('click', ()=>
+  //     {
+  //       this.title = 'Xoka Candidate Information Management System';
+  //     });
+      
+  //   }
+  // }
+
+  // ngAfterViewInit():void
+  // {
+
+  //   const menuElement: any = document.querySelector("#candidate-page");
+  //   setTimeout(()=>
+  //   {
+
+  //     if(menuElement)
+  //     {
+  //       menuElement.addEventListener('click', ()=>
+  //       {
+  //         this.title = 'Xoka Candidate Information Management System';
+  //       },1000);
+        
+  //     }
+  //   })
+  // }
 } // AppComponent
