@@ -15,12 +15,20 @@ import {HttpClientModule} from '@angular/common/http';
 import {BrowserModule} from '@angular/platform-browser';
 import {OverlayModule} from '@angular/cdk/overlay';
 import {FormsModule} from '@angular/forms';
+import { ShareService } from '../../app/srv/share.service';
 
 
 describe('AddCandidateComponent', () => 
 {
   let component: AddCandidateComponent;
   let fixture:   ComponentFixture<AddCandidateComponent>;
+
+  let srvS: ShareService;
+
+  const dialogMock = 
+  {
+    close: () => {}
+  };
 
   beforeEach(async () => 
   {
@@ -38,7 +46,7 @@ describe('AddCandidateComponent', () =>
       declarations: [AddCandidateComponent],
       providers: 
       [
-        {provide: MatDialogRef, useValue: {}},
+        {provide: MatDialogRef, useValue: dialogMock},
         {provide: MAT_DIALOG_DATA, useValue: []},
       ]
     })
@@ -51,11 +59,39 @@ describe('AddCandidateComponent', () =>
     fixture = TestBed.createComponent(AddCandidateComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
+
+    srvS = TestBed.inject(ShareService);
   });
 
-  
+
   it('should create', () => 
   {
     expect(component).toBeTruthy();
+  });
+
+
+  it('should test getErrorMessage method', () => 
+  {
+    expect(component.getErrorMessage()).toBe("Required field");
+  });
+
+
+  it('should test cancel method', () => 
+  {
+    let spy = spyOn(component.dialogRef, 'close').and.callThrough();
+
+    component.cancel();
+
+    expect(spy).toHaveBeenCalled(); 
+  });
+
+
+  it('should test addCandidate method', () => 
+  {
+    spyOn(srvS, 'addCandidate');
+
+    component.addCandidate();
+
+    expect(srvS.addCandidate).toHaveBeenCalled(); 
   });
 });
