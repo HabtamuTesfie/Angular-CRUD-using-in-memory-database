@@ -30,7 +30,8 @@ describe('CandidateComponent', () =>
   let sort:       MatSort;
   let httpClient: HttpClient;
 
-  beforeEach(async () => {
+  beforeEach(async () => 
+  {
     await TestBed.configureTestingModule
     ({
       imports: 
@@ -47,23 +48,21 @@ describe('CandidateComponent', () =>
     .compileComponents();
   });
 
+
   beforeEach(() => 
   {
     fixture = TestBed.createComponent(CandidateComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
 
-    //srvDs      = TestBed.inject(DataSourceService);
-   // srvS       = TestBed.inject(ShareService);
+    srvDs      = TestBed.inject(DataSourceService);
+    srvS       = TestBed.inject(ShareService);
     paginator  = TestBed.inject(MatPaginator);
     sort       = TestBed.inject(MatSort);
     httpClient = TestBed.inject(HttpClient);
-
-    srvS = new ShareService(httpClient);
-
-    srvDs = new DataSourceService(srvS,paginator,sort);
   });
 
+  
   it('should create', () => 
   {
     expect(component).toBeTruthy();
