@@ -10,8 +10,6 @@ import {ShareService} from "src/app/srv/share.service";
 /**
  * Employee management-UI test module.
  */
-
-
 //------------------------------------------------------------------------------
 @NgModule
 ({

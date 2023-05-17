@@ -11,7 +11,7 @@ import {Employee} from '../../../model/models';
 import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 import {Logger} from '../../../srv/logger.service';
-import { ShareService } from 'src/app/srv/share.service';
+import {ShareService} from 'src/app/srv/share.service';
 
 
 //-----------------------------------------------------------------------------

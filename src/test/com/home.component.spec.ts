@@ -8,32 +8,30 @@
  */
 //-----------------------------------------------------------------------------
 import {ComponentFixture, TestBed} from '@angular/core/testing';
-import {AddCandidateComponent} from '../app/com/candidate/add-candidate/add-candidate.component';
-import {CommonTestModule} from './app-common-testing.module';
+import { HomeComponent } from 'src/app/com/home/home.component';
 
-
-describe('AddCandidateComponent', () => 
+describe('HomeComponent', () => 
 {
-  let component: AddCandidateComponent;
-  let fixture:   ComponentFixture<AddCandidateComponent>;
+  let component: HomeComponent;
+  let fixture: ComponentFixture<HomeComponent>;
 
   beforeEach(async () => 
   {
     await TestBed.configureTestingModule
     ({
-      imports: [CommonTestModule],
-      declarations: [AddCandidateComponent],
-      providers: []
+      declarations: [HomeComponent]
     })
     .compileComponents();
   });
 
+
   beforeEach(() => 
   {
-    fixture = TestBed.createComponent(AddCandidateComponent);
+    fixture = TestBed.createComponent(HomeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
+
 
   it('should create', () => 
   {

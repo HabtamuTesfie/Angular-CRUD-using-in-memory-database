@@ -13,6 +13,7 @@ import {BehaviorSubject, Observable, map, merge} from 'rxjs';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatSort} from '@angular/material/sort';
 import {ShareService} from './share.service';
+import {Injectable} from '@angular/core';
 
 
 //-----------------------------------------------------------------------------
@@ -20,6 +21,7 @@ import {ShareService} from './share.service';
  * Data source services
  */
 //-----------------------------------------------------------------------------
+@Injectable({providedIn: 'root'})
 export class DataSourceService extends DataSource<Candidate> 
 {
   //--------------------------------------------------------private data members
