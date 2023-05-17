@@ -18,6 +18,7 @@ module.exports = function (config) {
         // the possible options are listed at https://jasmine.github.io/api/edge/Configuration.html
         // for example, you can disable the random execution with `random: false`
         // or set a specific seed with `seed: 4321`
+        verboseDeprecations: true,
       },
       clearContext: false // leave Jasmine Spec Runner output visible in browser
     },
@@ -25,11 +26,12 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/employee-management-ui'),
+      dir: require('path').join(__dirname, './coverage'),
       subdir: '.',
       reporters: [
         { type: 'html' },
-        { type: 'text-summary' }
+        { type: 'text-summary' },
+        { type: 'lcov'}
       ]
     },
     reporters: ['progress', 'kjhtml'],
@@ -46,5 +48,9 @@ module.exports = function (config) {
     },
     singleRun: true,
     restartOnFileChange: true,
+    // captureTimeout: 60000, // it was already there
+    // browserDisconnectTimeout : 10000,
+    // browserDisconnectTolerance : 1,
+    // browserNoActivityTimeout : 10000,//by default 10000
   });
 };
