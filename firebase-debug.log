@@ -1,0 +1,202 @@
+[debug] [2023-05-16T22:11:18.154Z] ----------------------------------------------------------------------
+[debug] [2023-05-16T22:11:18.155Z] Command:       /usr/local/bin/node /usr/local/bin/firebase init
+[debug] [2023-05-16T22:11:18.156Z] CLI Version:   12.0.1
+[debug] [2023-05-16T22:11:18.156Z] Platform:      darwin
+[debug] [2023-05-16T22:11:18.156Z] Node Version:  v16.14.2
+[debug] [2023-05-16T22:11:18.157Z] Time:          Tue May 16 2023 18:11:18 GMT-0400 (Eastern Daylight Time)
+[debug] [2023-05-16T22:11:18.157Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-05-16T22:11:18.163Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-05-16T22:11:18.164Z] > authorizing via signed-in user (habtamutesfie@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/ezanaaimro/Desktop/project/Xoka-Employee-Management/Employee-management-UI
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2023-05-16T22:12:40.771Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2023-05-16T22:12:40.772Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"crud-using-angular-material-and-inmemory-db","name":"crudApp"}
+[debug] [2023-05-16T22:12:43.190Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 400
+[debug] [2023-05-16T22:12:43.191Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"error":{"code":400,"message":"field [project_id] has issue [project_id must be at most 30 characters long]","status":"INVALID_ARGUMENT","details":[{"@type":"type.googleapis.com/google.rpc.BadRequest","fieldViolations":[{"field":"project_id","description":"project_id must be at most 30 characters long"}]},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"url":"https://cloud.google.com/resource-manager/reference/rest/v1/projects"}]}]}}
+[debug] [2023-05-16T22:12:44.548Z] FirebaseError: HTTP Error: 400, field [project_id] has issue [project_id must be at most 30 characters long]
+    at responseToError (/usr/local/lib/node_modules/firebase-tools/lib/responseToError.js:49:12)
+    at RetryOperation._fn (/usr/local/lib/node_modules/firebase-tools/lib/apiv2.js:288:77)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[error] 
+[error] Error: Failed to create project. See firebase-debug.log for more info.
+[debug] [2023-05-16T22:13:52.144Z] ----------------------------------------------------------------------
+[debug] [2023-05-16T22:13:52.146Z] Command:       /usr/local/bin/node /usr/local/bin/firebase init
+[debug] [2023-05-16T22:13:52.147Z] CLI Version:   12.0.1
+[debug] [2023-05-16T22:13:52.147Z] Platform:      darwin
+[debug] [2023-05-16T22:13:52.147Z] Node Version:  v16.14.2
+[debug] [2023-05-16T22:13:52.149Z] Time:          Tue May 16 2023 18:13:52 GMT-0400 (Eastern Daylight Time)
+[debug] [2023-05-16T22:13:52.149Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-05-16T22:13:52.154Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-05-16T22:13:52.155Z] > authorizing via signed-in user (habtamutesfie@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/ezanaaimro/Desktop/project/Xoka-Employee-Management/Employee-management-UI
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2023-05-16T22:14:34.299Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2023-05-16T22:14:34.299Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"crud-app","name":"crudapp"}
+[debug] [2023-05-16T22:14:35.589Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 409
+[debug] [2023-05-16T22:14:35.589Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"error":{"code":409,"message":"Requested entity already exists","status":"ALREADY_EXISTS"}}
+[debug] [2023-05-16T22:14:37.028Z] FirebaseError: HTTP Error: 409, Requested entity already exists
+    at responseToError (/usr/local/lib/node_modules/firebase-tools/lib/responseToError.js:49:12)
+    at RetryOperation._fn (/usr/local/lib/node_modules/firebase-tools/lib/apiv2.js:288:77)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[error] 
+[error] Error: Failed to create project because there is already a project with ID crud-app. Please try again with a unique project ID.
+[debug] [2023-05-16T22:15:08.478Z] ----------------------------------------------------------------------
+[debug] [2023-05-16T22:15:08.480Z] Command:       /usr/local/bin/node /usr/local/bin/firebase init
+[debug] [2023-05-16T22:15:08.481Z] CLI Version:   12.0.1
+[debug] [2023-05-16T22:15:08.481Z] Platform:      darwin
+[debug] [2023-05-16T22:15:08.482Z] Node Version:  v16.14.2
+[debug] [2023-05-16T22:15:08.488Z] Time:          Tue May 16 2023 18:15:08 GMT-0400 (Eastern Daylight Time)
+[debug] [2023-05-16T22:15:08.489Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-05-16T22:15:08.494Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-05-16T22:15:08.494Z] > authorizing via signed-in user (habtamutesfie@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/ezanaaimro/Desktop/project/Xoka-Employee-Management/Employee-management-UI
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2023-05-16T22:16:07.747Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2023-05-16T22:16:07.748Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"candidateApp","name":"candidateApp"}
+[debug] [2023-05-16T22:16:09.188Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 400
+[debug] [2023-05-16T22:16:09.188Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"error":{"code":400,"message":"field [project_id] has issue [project_id contains invalid characters]","status":"INVALID_ARGUMENT","details":[{"@type":"type.googleapis.com/google.rpc.BadRequest","fieldViolations":[{"field":"project_id","description":"project_id contains invalid characters"}]},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"url":"https://cloud.google.com/resource-manager/reference/rest/v1/projects"}]}]}}
+[debug] [2023-05-16T22:16:10.697Z] FirebaseError: HTTP Error: 400, field [project_id] has issue [project_id contains invalid characters]
+    at responseToError (/usr/local/lib/node_modules/firebase-tools/lib/responseToError.js:49:12)
+    at RetryOperation._fn (/usr/local/lib/node_modules/firebase-tools/lib/apiv2.js:288:77)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[error] 
+[error] Error: Failed to create project. See firebase-debug.log for more info.
+[debug] [2023-05-16T22:16:42.814Z] ----------------------------------------------------------------------
+[debug] [2023-05-16T22:16:42.816Z] Command:       /usr/local/bin/node /usr/local/bin/firebase init
+[debug] [2023-05-16T22:16:42.817Z] CLI Version:   12.0.1
+[debug] [2023-05-16T22:16:42.817Z] Platform:      darwin
+[debug] [2023-05-16T22:16:42.817Z] Node Version:  v16.14.2
+[debug] [2023-05-16T22:16:42.818Z] Time:          Tue May 16 2023 18:16:42 GMT-0400 (Eastern Daylight Time)
+[debug] [2023-05-16T22:16:42.818Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-05-16T22:16:42.824Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-05-16T22:16:42.825Z] > authorizing via signed-in user (habtamutesfie@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/ezanaaimro/Desktop/project/Xoka-Employee-Management/Employee-management-UI
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2023-05-16T22:17:17.520Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2023-05-16T22:17:17.520Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"crudui","name":"crudui"}
+[debug] [2023-05-16T22:17:18.771Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 409
+[debug] [2023-05-16T22:17:18.771Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"error":{"code":409,"message":"Requested entity already exists","status":"ALREADY_EXISTS"}}
+[debug] [2023-05-16T22:17:19.533Z] FirebaseError: HTTP Error: 409, Requested entity already exists
+    at responseToError (/usr/local/lib/node_modules/firebase-tools/lib/responseToError.js:49:12)
+    at RetryOperation._fn (/usr/local/lib/node_modules/firebase-tools/lib/apiv2.js:288:77)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[error] 
+[error] Error: Failed to create project because there is already a project with ID crudui. Please try again with a unique project ID.
+[debug] [2023-05-16T22:17:54.895Z] ----------------------------------------------------------------------
+[debug] [2023-05-16T22:17:54.897Z] Command:       /usr/local/bin/node /usr/local/bin/firebase init
+[debug] [2023-05-16T22:17:54.897Z] CLI Version:   12.0.1
+[debug] [2023-05-16T22:17:54.897Z] Platform:      darwin
+[debug] [2023-05-16T22:17:54.898Z] Node Version:  v16.14.2
+[debug] [2023-05-16T22:17:54.899Z] Time:          Tue May 16 2023 18:17:54 GMT-0400 (Eastern Daylight Time)
+[debug] [2023-05-16T22:17:54.899Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-05-16T22:17:54.905Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-05-16T22:17:54.905Z] > authorizing via signed-in user (habtamutesfie@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/ezanaaimro/Desktop/project/Xoka-Employee-Management/Employee-management-UI
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2023-05-16T22:18:19.764Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2023-05-16T22:18:19.764Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"habtamuapp","name":"habtamuapp"}
+[debug] [2023-05-16T22:18:21.259Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 200
+[debug] [2023-05-16T22:18:21.260Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"name":"operations/cp.4647591382509762478"}
+[debug] [2023-05-16T22:18:21.261Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.4647591382509762478 [none]
+[debug] [2023-05-16T22:18:22.497Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.4647591382509762478 200
+[debug] [2023-05-16T22:18:22.497Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.4647591382509762478 {"name":"operations/cp.4647591382509762478","metadata":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.ProjectCreationStatus","ready":true},"done":true,"error":{"code":9,"message":"Callers must accept Terms of Service","details":[{"@type":"type.googleapis.com/google.rpc.PreconditionFailure","violations":[{"type":"TOS","subject":"cloud","description":"Callers must accept Terms of Service"}]}]}}
+[debug] [2023-05-16T22:18:23.527Z] FirebaseError: Callers must accept Terms of Service
+    at OperationPoller.poll (/usr/local/lib/node_modules/firebase-tools/lib/operation-poller.js:24:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async createCloudProject (/usr/local/lib/node_modules/firebase-tools/lib/management/projects.js:186:29)
+    at async createFirebaseProjectAndLog (/usr/local/lib/node_modules/firebase-tools/lib/management/projects.js:45:9)
+    at async promptAndCreateNewProject (/usr/local/lib/node_modules/firebase-tools/lib/init/features/project.js:32:12)
+    at async doSetup (/usr/local/lib/node_modules/firebase-tools/lib/init/features/project.js:88:27)
+    at async init (/usr/local/lib/node_modules/firebase-tools/lib/init/index.js:37:9)
+[error] 
+[error] Error: Failed to create project. See firebase-debug.log for more info.

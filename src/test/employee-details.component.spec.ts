@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { EmployeeDetailsComponent } from '../app/com/employee/employee-details/employee-details.component';
+import { CommonTestModule } from './app-common-testing.module';
 
 describe('EmployeeDetailsComponent', () => {
   let component: EmployeeDetailsComponent;
@@ -8,6 +9,7 @@ describe('EmployeeDetailsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [CommonTestModule],
       declarations: [ EmployeeDetailsComponent ]
     })
     .compileComponents();

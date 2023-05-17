@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { UpdateCandidateComponent } from '../app/com/candidate/update-candidate/update-candidate.component';
+import { CommonTestModule } from './app-common-testing.module';
 
 describe('UpdateCandidateComponent', () => {
   let component: UpdateCandidateComponent;
@@ -8,6 +9,7 @@ describe('UpdateCandidateComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports: [CommonTestModule],
       declarations: [ UpdateCandidateComponent ]
     })
     .compileComponents();
